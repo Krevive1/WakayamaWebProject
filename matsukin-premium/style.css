@@ -93,6 +93,12 @@ h1 {
   border: 1px solid var(--gold);
 }
 
+.btn.instagram {
+  background: #221c14;
+  color: var(--gold-soft);
+  border: 1px solid var(--gold);
+}
+
 main {
   padding: 34px 16px 42px;
 }
@@ -186,6 +192,11 @@ h2 {
   color: var(--text-sub);
 }
 
+.instagram-panel .cta-row {
+  margin-top: 16px;
+  grid-template-columns: 1fr;
+}
+
 .note {
   margin-top: 12px;
   font-size: 0.82rem;
@@ -220,6 +231,10 @@ footer {
 
   .cta-row {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .instagram-panel .cta-row {
+    grid-template-columns: 1fr;
   }
 
   .menu-list {

@@ -93,6 +93,12 @@ h1 {
   border: 2px solid #e0b193;
 }
 
+.btn.instagram {
+  background: linear-gradient(135deg, #f58529 0%, #dd2a7b 55%, #8134af 100%);
+  color: #fff;
+  box-shadow: 0 8px 18px rgba(129, 52, 175, 0.28);
+}
+
 main {
   padding: 24px 12px 34px;
 }
@@ -191,6 +197,11 @@ h2 {
   color: #7e614f;
 }
 
+.instagram-panel p {
+  margin: 12px 0 0;
+  color: var(--text-sub);
+}
+
 footer {
   text-align: center;
   padding: 26px 14px;
@@ -218,6 +229,10 @@ footer {
 
   .cta-row {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .instagram-panel .cta-row {
+    grid-template-columns: 1fr;
   }
 }
 

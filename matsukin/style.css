@@ -87,6 +87,11 @@ h1 {
   color: #220b08;
 }
 
+.instagram {
+  background: linear-gradient(135deg, #405de6 0%, #833ab4 45%, #e1306c 72%, #fd1d1d 100%);
+  color: #ffffff;
+}
+
 main {
   width: 100%;
   max-width: var(--max-width);
@@ -205,6 +210,15 @@ h2 {
   margin: 14px 0 0;
 }
 
+.instagram-section {
+  margin-top: 14px;
+  text-align: center;
+}
+
+.instagram-section p {
+  margin: 14px 0 0;
+}
+
 .wide {
   margin: 12px auto 0;
   max-width: 360px;
@@ -234,6 +248,10 @@ footer p {
   .cta-row {
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  .hero .cta-row {
+    gap: 10px;
   }
 
   .btn {
