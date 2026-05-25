@@ -92,20 +92,40 @@ h2 {
   padding-left: 12px;
 }
 
+.section-lead,
+.menu-desc {
+  margin: 0 0 16px;
+}
+
 .cards {
   display: grid;
-  gap: 16px;
+  gap: 14px;
 }
 
 .card {
   background: #f8f3ef;
   border-radius: 16px;
-  padding: 18px;
+  padding: 16px;
 }
 
 .card h3 {
-  margin-top: 0;
+  margin: 0 0 8px;
   color: #b3221c;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.card p {
+  margin: 0;
+}
+
+.point-list {
+  margin: 12px 0 0;
+  padding-left: 20px;
+}
+
+.point-list li {
+  margin-bottom: 6px;
 }
 
 .menu-list {
@@ -177,6 +197,11 @@ footer {
   }
 
   .cards {
+    gap: 20px;
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card {
+    padding: 20px;
   }
 }
