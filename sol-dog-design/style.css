@@ -71,6 +71,23 @@ h1 {
   max-width: 44rem;
 }
 
+.hero-meta {
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.hero-meta li {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid #d8e3d7;
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 0.93rem;
+  color: #4a5b50;
+}
+
 .hero-note {
   margin: 10px 0 0;
   color: var(--accent-dark);
@@ -243,6 +260,10 @@ footer {
 
   .cta-row {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .hero-meta {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .single-cta {
