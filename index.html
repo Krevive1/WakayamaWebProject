@@ -51,6 +51,12 @@
       padding-left: 12px;
     }
 
+    .sample-buttons {
+      display: grid;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
     .button {
       display: inline-block;
       background: #c0392b;
@@ -60,6 +66,26 @@
       border-radius: 999px;
       font-weight: bold;
       margin-top: 12px;
+    }
+
+    .sample-buttons .button {
+      margin-top: 0;
+      width: 100%;
+      text-align: center;
+    }
+
+    .button.alt {
+      background: #9f2f24;
+    }
+
+    .button.subtle {
+      background: #7f271f;
+    }
+
+    @media (min-width: 720px) {
+      .sample-buttons {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
     }
 
     footer {
@@ -99,7 +125,11 @@
       <p>
         まずは飲食店向けLPのサンプルを作成していきます。
       </p>
-      <a class="button" href="./matsukin/">ホルモン馬鹿 松金 サンプルLPを見る</a>
+      <div class="sample-buttons">
+        <a class="button" href="./matsukin/">パターンA：力強いホルモン店風</a>
+        <a class="button alt" href="./matsukin-premium/">パターンB：落ち着いた高級感</a>
+        <a class="button subtle" href="./matsukin-casual/">パターンC：親しみやすい大衆酒場風</a>
+      </div>
     </section>
   </main>
 
