@@ -21,6 +21,7 @@ body {
   color: #ffffff;
   line-height: 1.7;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 .hero {
@@ -194,11 +195,17 @@ h2 {
 
 .info dd {
   margin: 0;
+  min-width: 0;
 }
 
 .info a {
   color: var(--accent-deep);
   font-weight: 700;
+  display: block;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-all;
 }
 
 .last-cta {

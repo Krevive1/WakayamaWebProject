@@ -20,6 +20,7 @@ body {
   background: radial-gradient(circle at top right, #1f1b15 0%, var(--bg) 52%);
   color: var(--text);
   line-height: 1.9;
+  overflow-x: hidden;
 }
 
 .hero {
@@ -181,10 +182,16 @@ h2 {
 .info dd {
   margin: 0;
   color: #d6ccbb;
+  min-width: 0;
 }
 
 .info a {
   color: var(--gold-soft);
+  display: block;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-all;
 }
 
 .cta-panel p {
