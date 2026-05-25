@@ -71,10 +71,20 @@ h1 {
   max-width: 44rem;
 }
 
+.hero-note {
+  margin: 10px 0 0;
+  color: var(--accent-dark);
+  font-weight: 700;
+}
+
 .cta-row {
   margin-top: 18px;
   display: grid;
   gap: 10px;
+}
+
+.single-cta {
+  margin-top: 14px;
 }
 
 .btn {
@@ -82,7 +92,7 @@ h1 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 52px;
+  min-height: 54px;
   text-decoration: none;
   border-radius: 999px;
   padding: 12px 18px;
@@ -161,6 +171,11 @@ h3 {
   padding: 12px;
 }
 
+.feature-item h3 {
+  color: #5b4a3a;
+}
+
+.feature-item p,
 .menu-item p {
   margin: 0;
   color: var(--sub);
@@ -191,6 +206,15 @@ h3 {
 
 .info-list dd {
   margin: 0;
+  min-width: 0;
+}
+
+.info-list a {
+  color: var(--accent-dark);
+  display: inline-block;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .contact-card .cta-row {
@@ -221,6 +245,11 @@ footer {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .single-cta {
+    grid-template-columns: 1fr;
+    max-width: 340px;
+  }
+
   .feature-grid,
   .menu-grid,
   .gallery-grid {
@@ -244,7 +273,7 @@ footer {
   }
 
   .feature-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .menu-grid {
@@ -256,7 +285,7 @@ footer {
   }
 
   .info-list {
-    grid-template-columns: 110px 1fr;
+    grid-template-columns: 130px 1fr;
     row-gap: 10px;
     column-gap: 12px;
     align-items: start;
