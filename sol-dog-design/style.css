@@ -1,0 +1,268 @@
+:root {
+  --bg: #f8f6f1;
+  --card: #ffffff;
+  --text: #3b3128;
+  --sub: #6c5f53;
+  --line: #e7dfd4;
+  --beige: #efe6d8;
+  --brown: #8d7159;
+  --green: #dfeadf;
+  --accent: #7d9c86;
+  --accent-dark: #5f7f6b;
+  --max: 1040px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg, #fcfaf7 0%, var(--bg) 100%);
+  line-height: 1.75;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 14px;
+}
+
+.hero {
+  background: linear-gradient(150deg, #fff 0%, var(--beige) 55%, var(--green) 100%);
+  padding: 42px 0;
+}
+
+.hero-inner {
+  padding-top: 6px;
+  padding-bottom: 8px;
+}
+
+.eyebrow {
+  margin: 0;
+  display: inline-block;
+  background: #fff;
+  border: 1px solid #d8c9b6;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 0.86rem;
+  color: var(--brown);
+}
+
+h1 {
+  margin: 16px 0 8px;
+  font-size: clamp(2rem, 8vw, 3.2rem);
+  line-height: 1.2;
+}
+
+.catch {
+  margin: 0;
+  font-size: clamp(1.15rem, 5vw, 1.6rem);
+  color: var(--accent-dark);
+  font-weight: 700;
+}
+
+.hero-text {
+  margin: 14px 0 0;
+  color: var(--sub);
+  max-width: 44rem;
+}
+
+.cta-row {
+  margin-top: 18px;
+  display: grid;
+  gap: 10px;
+}
+
+.btn {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-weight: 700;
+  box-sizing: border-box;
+}
+
+.btn-primary {
+  background: var(--accent-dark);
+  color: #fff;
+}
+
+.btn-secondary {
+  background: #fff;
+  color: var(--accent-dark);
+  border: 1px solid #b7c9be;
+}
+
+main {
+  padding-top: 18px;
+  padding-bottom: 34px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 20px 14px;
+  margin-bottom: 14px;
+  box-shadow: 0 6px 16px rgba(90, 74, 60, 0.08);
+}
+
+h2 {
+  margin: 0;
+  font-size: clamp(1.24rem, 5.1vw, 1.65rem);
+  border-left: 5px solid var(--accent);
+  padding-left: 10px;
+  line-height: 1.4;
+}
+
+h3 {
+  margin: 0 0 6px;
+  font-size: 1.03rem;
+}
+
+.section-text,
+.note {
+  margin: 12px 0 0;
+  color: var(--sub);
+}
+
+.list-check,
+.flow-list {
+  margin: 14px 0 0;
+  padding-left: 1.2rem;
+}
+
+.list-check li,
+.flow-list li {
+  margin-bottom: 8px;
+}
+
+.feature-grid,
+.menu-grid,
+.gallery-grid {
+  margin-top: 14px;
+  display: grid;
+  gap: 10px;
+}
+
+.feature-item,
+.menu-item {
+  border: 1px solid #eadfce;
+  background: #fffdf9;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.menu-item p {
+  margin: 0;
+  color: var(--sub);
+}
+
+.placeholder {
+  aspect-ratio: 4 / 3;
+  border: 1px dashed #c3b49f;
+  border-radius: 12px;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  color: #8f806f;
+  font-weight: 700;
+}
+
+.info-list {
+  margin: 14px 0 0;
+  display: grid;
+  gap: 6px;
+}
+
+.info-list dt {
+  margin-top: 8px;
+  color: var(--brown);
+  font-weight: 700;
+}
+
+.info-list dd {
+  margin: 0;
+}
+
+.contact-card .cta-row {
+  margin-top: 14px;
+}
+
+footer {
+  text-align: center;
+  padding: 24px 14px 30px;
+  color: #75695e;
+}
+
+@media (min-width: 720px) {
+  .container {
+    padding: 0 22px;
+  }
+
+  .hero {
+    padding: 56px 0;
+  }
+
+  .card {
+    padding: 24px;
+    margin-bottom: 16px;
+  }
+
+  .cta-row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .feature-grid,
+  .menu-grid,
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .list-check {
+    columns: 2;
+    column-gap: 28px;
+  }
+
+  .list-check li {
+    break-inside: avoid;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    padding: 72px 0;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .info-list {
+    grid-template-columns: 110px 1fr;
+    row-gap: 10px;
+    column-gap: 12px;
+    align-items: start;
+  }
+
+  .info-list dt {
+    margin-top: 0;
+  }
+}
