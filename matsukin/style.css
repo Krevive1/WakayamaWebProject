@@ -87,7 +87,7 @@ h1 {
   color: #220b08;
 }
 
-.instagram {
+.tabelog {
   background: linear-gradient(135deg, #405de6 0%, #833ab4 45%, #e1306c 72%, #fd1d1d 100%);
   color: #ffffff;
 }
@@ -210,12 +210,12 @@ h2 {
   margin: 14px 0 0;
 }
 
-.instagram-section {
+.tabelog-section {
   margin-top: 14px;
   text-align: center;
 }
 
-.instagram-section p {
+.tabelog-section p {
   margin: 14px 0 0;
 }
 

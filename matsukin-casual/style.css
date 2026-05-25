@@ -93,7 +93,7 @@ h1 {
   border: 2px solid #e0b193;
 }
 
-.btn.instagram {
+.btn.tabelog {
   background: linear-gradient(135deg, #f58529 0%, #dd2a7b 55%, #8134af 100%);
   color: #fff;
   box-shadow: 0 8px 18px rgba(129, 52, 175, 0.28);
@@ -197,7 +197,7 @@ h2 {
   color: #7e614f;
 }
 
-.instagram-panel p {
+.tabelog-panel p {
   margin: 12px 0 0;
   color: var(--text-sub);
 }
@@ -231,7 +231,7 @@ footer {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .instagram-panel .cta-row {
+  .tabelog-panel .cta-row {
     grid-template-columns: 1fr;
   }
 }
