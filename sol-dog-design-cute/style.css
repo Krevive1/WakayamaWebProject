@@ -297,6 +297,10 @@ h3 {
   margin-top: 14px;
 }
 
+.plant-cta {
+  margin-top: 14px;
+}
+
 .placeholder,
 .plant-placeholder {
   min-height: 120px;
@@ -378,6 +382,11 @@ footer {
   .single-cta {
     max-width: 380px;
     grid-template-columns: 1fr;
+  }
+
+  .plant-cta {
+    max-width: 640px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .feature-grid,
