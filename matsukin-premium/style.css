@@ -1,14 +1,14 @@
 :root {
-  --bg: #0a0908;
-  --bg-soft: #12100d;
-  --panel: #14110e;
-  --panel-soft: #1b1611;
-  --line: rgba(211, 181, 130, 0.28);
-  --gold: #cdae77;
-  --gold-soft: #ead8b3;
-  --ember: #8f3c2d;
-  --text: #f4efe4;
-  --text-sub: #cdc2ae;
+  --bg: #090806;
+  --bg-soft: #13100d;
+  --panel: #15120e;
+  --panel-soft: #1e1813;
+  --line: rgba(201, 164, 106, 0.3);
+  --gold: #c6a46a;
+  --gold-soft: #eadab7;
+  --ember: #a03f2d;
+  --text: #f5f0e5;
+  --text-sub: #cfc2ab;
   --max: 1160px;
 }
 
@@ -25,105 +25,114 @@ body {
 body {
   font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
   color: var(--text);
-  background: radial-gradient(circle at top, #1a1510 0%, var(--bg) 58%);
+  background: radial-gradient(circle at top, #1a1510 0%, var(--bg) 60%);
   line-height: 1.9;
-  overflow-x: hidden;
 }
 
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 20;
-  background: rgba(8, 7, 6, 0.62);
+  z-index: 30;
+  background: rgba(8, 7, 6, 0.82);
+  border-bottom: 1px solid rgba(209, 180, 128, 0.25);
   backdrop-filter: blur(6px);
-  border-bottom: 1px solid rgba(223, 193, 146, 0.14);
 }
 
 .site-header-inner {
   width: 100%;
   max-width: var(--max);
   margin: 0 auto;
-  padding: 10px 16px;
+  padding: 12px 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 14px;
 }
 
-.brand {
+.site-title {
   color: var(--gold-soft);
   text-decoration: none;
-  font-size: 0.78rem;
+  font-size: 0.9rem;
   letter-spacing: 0.08em;
   white-space: nowrap;
 }
 
 .site-nav {
   display: flex;
-  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px 12px;
 }
 
 .site-nav a {
-  color: #dfcfb2;
+  color: #e8d9bb;
   text-decoration: none;
-  font-size: 0.74rem;
-  letter-spacing: 0.06em;
+  font-size: 0.76rem;
+  letter-spacing: 0.05em;
+  opacity: 0.86;
+}
+
+.site-nav a.active,
+.site-nav a:hover {
+  opacity: 1;
+  color: #fff2d7;
 }
 
 .hero {
   position: relative;
-  min-height: calc(100vh - 56px);
+  min-height: calc(100vh - 62px);
   background: url("images/hero-hormone.png") center center / cover no-repeat;
   display: flex;
   align-items: center;
-  padding: 50px 16px 46px;
+  padding: 54px 16px 48px;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(140deg, rgba(10, 8, 7, 0.82) 14%, rgba(27, 17, 11, 0.68) 52%, rgba(9, 8, 7, 0.88) 100%),
-    radial-gradient(circle at 78% 22%, rgba(132, 51, 34, 0.27) 0%, rgba(0, 0, 0, 0) 50%);
+    linear-gradient(145deg, rgba(9, 7, 6, 0.86) 10%, rgba(36, 20, 12, 0.7) 52%, rgba(8, 7, 6, 0.88) 100%),
+    radial-gradient(circle at 78% 20%, rgba(158, 62, 43, 0.28) 0%, rgba(0, 0, 0, 0) 52%);
 }
 
 .hero-inner {
-  position: relative;
   width: 100%;
   max-width: var(--max);
   margin: 0 auto;
+  position: relative;
   z-index: 1;
 }
 
-.hero-label {
+.kicker {
   margin: 0;
-  display: inline-block;
-  padding: 5px 12px;
-  border: 1px solid rgba(218, 188, 139, 0.68);
   color: var(--gold-soft);
-  font-size: 0.82rem;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+  text-transform: uppercase;
 }
 
 h1 {
-  margin: 22px 0 10px;
-  font-size: clamp(2.2rem, 9vw, 4.9rem);
-  line-height: 1.12;
-  letter-spacing: 0.02em;
+  margin: 18px 0 10px;
+  font-size: clamp(2rem, 8vw, 4.7rem);
+  line-height: 1.14;
+  color: #fff3db;
 }
 
 .hero-copy {
   margin: 0;
-  max-width: 44rem;
-  color: #efe5d3;
-  font-size: clamp(1rem, 3.8vw, 1.42rem);
-  text-shadow: 0 1px 14px rgba(0, 0, 0, 0.5);
+  font-size: clamp(1.05rem, 4vw, 1.6rem);
+  color: #f2e1bf;
 }
 
-.hero-cta {
-  margin-top: 22px;
+.hero-sub {
+  margin: 10px 0 0;
+  color: #ddccb0;
+}
+
+.cta-row {
+  margin-top: 20px;
   display: grid;
-  gap: 11px;
+  gap: 10px;
 }
 
 .btn {
@@ -131,129 +140,123 @@ h1 {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
   text-decoration: none;
+  text-align: center;
   border-radius: 999px;
   padding: 13px 18px;
-  font-size: 0.92rem;
+  font-size: 0.93rem;
   font-weight: 700;
   letter-spacing: 0.04em;
-  transition: 0.24s ease;
 }
 
 .btn-solid {
-  color: #1b130a;
-  background: linear-gradient(95deg, #a47a3f 0%, #d7ba83 100%);
-  border: 1px solid #d7ba83;
+  color: #1e1308;
+  background: linear-gradient(95deg, #a5783c 0%, #d5b67c 100%);
+  border: 1px solid #d8bd89;
 }
 
 .btn-outline {
   color: var(--text);
-  border: 1px solid rgba(219, 191, 146, 0.72);
-  background: rgba(10, 9, 8, 0.48);
+  border: 1px solid rgba(219, 190, 142, 0.72);
+  background: rgba(12, 10, 8, 0.42);
 }
 
-main {
+.container {
   width: 100%;
   max-width: var(--max);
   margin: 0 auto;
-  padding: 30px 16px 54px;
+  padding: 32px 16px 56px;
 }
 
-.section {
-  margin-bottom: 18px;
+.page-main {
+  padding-top: 26px;
+}
+
+.section-block {
+  background: linear-gradient(160deg, rgba(26, 20, 15, 0.96) 0%, rgba(15, 12, 9, 0.96) 100%);
+  border: 1px solid var(--line);
   padding: 24px 18px;
-  border: 1px solid rgba(203, 173, 123, 0.28);
-  background: linear-gradient(160deg, rgba(25, 20, 15, 0.96) 0%, rgba(16, 13, 10, 0.96) 100%);
-}
-
-.section-dark {
-  background: linear-gradient(160deg, rgba(22, 16, 12, 0.98) 0%, rgba(13, 10, 8, 0.98) 100%);
-  border-color: rgba(160, 61, 40, 0.35);
-}
-
-.section-plain {
-  background: linear-gradient(160deg, rgba(21, 17, 13, 0.95) 0%, rgba(14, 12, 9, 0.95) 100%);
-}
-
-.section-head {
-  margin-bottom: 10px;
-}
-
-.section-kicker {
-  margin: 0;
-  color: #b8895a;
-  letter-spacing: 0.12em;
-  font-size: 0.74rem;
-  text-transform: uppercase;
+  margin-bottom: 16px;
 }
 
 h2 {
-  margin: 6px 0 0;
+  margin: 0;
   color: var(--gold-soft);
-  font-size: clamp(1.5rem, 5vw, 2.3rem);
-  line-height: 1.3;
+  font-size: clamp(1.34rem, 4.6vw, 2rem);
+  line-height: 1.35;
 }
 
-.section-text {
-  margin: 10px 0 0;
+.page-title {
+  margin: 8px 0 0;
+  color: #f8e6c1;
+  font-size: clamp(1.7rem, 5.8vw, 2.9rem);
+  line-height: 1.35;
+}
+
+.lead,
+.note {
+  margin: 12px 0 0;
   color: var(--text-sub);
 }
 
-.card-grid,
-.split-grid,
+.three-grid,
 .menu-grid {
   margin-top: 14px;
   display: grid;
   gap: 12px;
 }
 
-.card,
-.split-card,
-.menu-item {
-  border: 1px solid rgba(190, 158, 108, 0.22);
-  background: linear-gradient(160deg, rgba(34, 28, 21, 0.8) 0%, rgba(20, 17, 13, 0.8) 100%);
+.info-card,
+.link-card,
+.menu-card {
+  background: linear-gradient(160deg, rgba(35, 28, 20, 0.82) 0%, rgba(20, 17, 13, 0.82) 100%);
+  border: 1px solid rgba(197, 163, 108, 0.22);
   padding: 16px;
 }
 
-h3 {
+.info-card h3,
+.link-card h3,
+.menu-card h2 {
   margin: 0;
-  color: #ecd8b1;
-  font-size: 1.06rem;
+  color: #f2dfba;
+  font-size: 1.08rem;
 }
 
-.card p,
-.split-card p,
-.menu-item p {
+.info-card p,
+.link-card p,
+.menu-card p {
   margin: 8px 0 0;
   color: var(--text-sub);
 }
 
-.menu-item {
-  position: relative;
-  padding-left: 18px;
+.link-card {
+  text-decoration: none;
+  color: inherit;
 }
 
-.menu-item::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  background: linear-gradient(180deg, rgba(194, 148, 83, 0.95) 0%, rgba(131, 54, 39, 0.9) 100%);
+.menu-image-placeholder,
+.placeholder-box {
+  width: 100%;
+  min-height: 160px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: #b9aa8f;
+  border: 1px dashed rgba(197, 163, 108, 0.4);
+  background: rgba(14, 11, 8, 0.5);
+  margin-bottom: 10px;
 }
 
 .shop-info {
   margin: 12px 0 0;
   display: grid;
-  gap: 5px;
+  gap: 6px;
 }
 
 .shop-info dt {
-  color: #e8cf9f;
+  color: #ead2a3;
   font-weight: 700;
-  margin-top: 9px;
+  margin-top: 8px;
 }
 
 .shop-info dd {
@@ -262,108 +265,81 @@ h3 {
   min-width: 0;
 }
 
-.shop-info a {
-  color: #f0ddb9;
-  display: inline-block;
-  max-width: 100%;
+.shop-info a,
+.site-footer a {
+  color: #f1debb;
   overflow-wrap: anywhere;
   word-break: break-word;
 }
 
-.inline-cta {
-  margin-top: 16px;
-  display: grid;
-  gap: 10px;
-}
-
-footer {
-  border-top: 1px solid rgba(196, 167, 121, 0.2);
-  text-align: center;
-  padding: 26px 16px 30px;
-  color: #b7ac98;
+.site-footer {
+  border-top: 1px solid rgba(198, 164, 108, 0.24);
   background: #080706;
+  padding: 26px 16px 32px;
 }
 
-footer .small {
-  margin-top: 6px;
-  color: #968d80;
-  font-size: 12px;
+.footer-inner {
+  width: 100%;
+  max-width: var(--max);
+  margin: 0 auto;
+  color: #c6b79f;
+  font-size: 0.94rem;
+}
+
+.footer-inner p {
+  margin: 4px 0;
+}
+
+.sample-note {
+  margin-top: 10px;
+  font-size: 0.82rem;
+  color: #9b907f;
 }
 
 @media (min-width: 760px) {
   .site-header-inner {
-    padding: 12px 26px;
+    padding: 12px 24px;
   }
 
-  .brand {
-    font-size: 0.85rem;
+  .site-title {
+    font-size: 1rem;
   }
 
   .site-nav a {
-    font-size: 0.8rem;
+    font-size: 0.84rem;
   }
 
   .hero {
-    padding: 80px 26px 72px;
+    padding: 82px 24px 72px;
   }
 
-  .hero-cta {
+  .hero-cta,
+  .shop-cta {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     max-width: 860px;
   }
 
-  main {
-    padding: 44px 22px 64px;
+  .container {
+    padding: 40px 24px 64px;
   }
 
-  .section {
-    padding: 34px 30px;
-    margin-bottom: 20px;
+  .section-block {
+    padding: 30px 28px;
+    margin-bottom: 18px;
   }
 
-  .card-grid,
-  .split-grid {
+  .three-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 14px;
   }
 
-  .split-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .menu-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .inline-cta {
-    max-width: 420px;
-  }
-}
-
-@media (min-width: 1080px) {
-  .hero {
-    min-height: calc(100vh - 60px);
-    background-position: center 42%;
-  }
-
-  h1 {
-    font-size: clamp(3rem, 6.4vw, 5.4rem);
-  }
-
-  main {
-    padding-top: 52px;
-  }
-
-  .section {
-    padding: 40px 40px;
-  }
-
-  .menu-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
   }
 
   .shop-info {
-    grid-template-columns: 120px 1fr;
+    grid-template-columns: 130px 1fr;
     column-gap: 12px;
     row-gap: 8px;
     align-items: start;
@@ -371,5 +347,16 @@ footer .small {
 
   .shop-info dt {
     margin-top: 0;
+  }
+}
+
+@media (min-width: 1080px) {
+  .hero {
+    min-height: calc(100vh - 64px);
+    background-position: center 40%;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
