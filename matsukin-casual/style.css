@@ -26,17 +26,17 @@ body {
 
 .hero {
   position: relative;
-  min-height: 88vh;
+  min-height: 84vh;
   padding: 42px 14px;
   display: flex;
   align-items: center;
-  background: url("店の画像夜.jpg") center center / cover no-repeat;
+  background: url("store-night.jpg") center 78% / cover no-repeat;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(160deg, rgba(12, 8, 6, 0.78) 8%, rgba(40, 22, 13, 0.64) 48%, rgba(11, 9, 7, 0.8) 100%);
+  background: linear-gradient(160deg, rgba(12, 8, 6, 0.62) 8%, rgba(40, 22, 13, 0.54) 48%, rgba(11, 9, 7, 0.66) 100%);
 }
 
 .hero-inner,
@@ -265,6 +265,7 @@ footer {
   .hero {
     min-height: 92vh;
     padding: 54px 24px;
+    background-position: center 66%;
   }
 
   .hero-cta {
