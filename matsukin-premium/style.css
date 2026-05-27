@@ -195,7 +195,7 @@ h1 {
 
 .about-page .info-card,
 .shop-page .info-card {
-  background: linear-gradient(160deg, rgba(35, 28, 20, 0.82) 0%, rgba(20, 17, 13, 0.82) 100%);
+  background: linear-gradient(160deg, #231b14 0%, #17120e 100%);
   border: 1px solid rgba(197, 163, 108, 0.28);
 }
 
