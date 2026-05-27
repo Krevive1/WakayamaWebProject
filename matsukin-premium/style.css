@@ -188,9 +188,17 @@ h1 {
 .about-page .content-panel,
 .shop-page .content-panel {
   background:
-    linear-gradient(135deg, rgba(8, 6, 5, 0.86) 10%, rgba(18, 13, 9, 0.74) 52%, rgba(9, 7, 5, 0.88) 100%),
+    linear-gradient(135deg, rgba(8, 6, 5, 0.78) 10%, rgba(18, 13, 9, 0.62) 52%, rgba(9, 7, 5, 0.82) 100%),
     url("./images/store-night-grade.png") center center / cover no-repeat;
   border: 1px solid rgba(218, 181, 118, 0.3);
+}
+
+.about-page .info-card,
+.shop-page .info-card {
+  background:
+    linear-gradient(160deg, rgba(12, 9, 6, 0.88) 0%, rgba(18, 13, 9, 0.8) 100%),
+    url("./images/store-night-grade.png") center center / cover no-repeat;
+  border: 1px solid rgba(197, 163, 108, 0.28);
 }
 
 h2 {
