@@ -1,12 +1,8 @@
 :root {
   --bg: #090806;
   --bg-soft: #13100d;
-  --panel: #15120e;
-  --panel-soft: #1e1813;
   --line: rgba(201, 164, 106, 0.3);
-  --gold: #c6a46a;
   --gold-soft: #eadab7;
-  --ember: #a03f2d;
   --text: #f5f0e5;
   --text-sub: #cfc2ab;
   --max: 1160px;
@@ -179,6 +175,23 @@ h1 {
   margin-bottom: 16px;
 }
 
+.section-hero-bg {
+  position: relative;
+  overflow: hidden;
+  background: url("store-night-grade.png") center center / cover no-repeat;
+}
+
+.section-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(145deg, rgba(7, 6, 5, 0.8) 15%, rgba(28, 18, 12, 0.62) 52%, rgba(7, 6, 5, 0.84) 100%);
+}
+
+.section-hero-content {
+  position: relative;
+  z-index: 1;
+}
+
 h2 {
   margin: 0;
   color: var(--gold-soft);
@@ -234,17 +247,17 @@ h2 {
   color: inherit;
 }
 
-.menu-image-placeholder,
-.placeholder-box {
+.menu-photo {
   width: 100%;
-  min-height: 160px;
-  display: grid;
-  place-items: center;
-  text-align: center;
-  color: #b9aa8f;
-  border: 1px dashed rgba(197, 163, 108, 0.4);
-  background: rgba(14, 11, 8, 0.5);
+  height: 170px;
+  object-fit: cover;
+  display: block;
   margin-bottom: 10px;
+}
+
+.menu-card.text-only {
+  display: grid;
+  align-content: start;
 }
 
 .shop-info {
@@ -317,6 +330,11 @@ h2 {
   .shop-cta {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     max-width: 860px;
+  }
+
+  .shop-cta {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 560px;
   }
 
   .container {
