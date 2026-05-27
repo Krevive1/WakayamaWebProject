@@ -1,6 +1,5 @@
 :root {
   --bg: #090806;
-  --bg-soft: #13100d;
   --line: rgba(201, 164, 106, 0.3);
   --gold-soft: #eadab7;
   --text: #f5f0e5;
@@ -18,11 +17,33 @@ body {
   padding: 0;
 }
 
-body {
+body.premium-page {
   font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
   color: var(--text);
   background: radial-gradient(circle at top, #1a1510 0%, var(--bg) 60%);
   line-height: 1.9;
+}
+
+body.store-bg {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.78) 0%,
+      rgba(0, 0, 0, 0.88) 45%,
+      rgba(0, 0, 0, 0.96) 100%
+    ),
+    url("./images/store-night-grade.png");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+  body.store-bg {
+    background-attachment: scroll;
+    background-position: center top;
+  }
 }
 
 .site-header {
@@ -175,21 +196,10 @@ h1 {
   margin-bottom: 16px;
 }
 
-.section-hero-bg {
-  position: relative;
-  overflow: hidden;
-  background: url("./images/store-night-grade.png") center center / cover no-repeat;
-}
-
-.section-hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(145deg, rgba(7, 6, 5, 0.8) 15%, rgba(28, 18, 12, 0.62) 52%, rgba(7, 6, 5, 0.84) 100%);
-}
-
-.section-hero-content {
-  position: relative;
-  z-index: 1;
+.content-panel {
+  background: rgba(12, 8, 5, 0.78);
+  border: 1px solid rgba(218, 181, 118, 0.28);
+  backdrop-filter: blur(4px);
 }
 
 h2 {
@@ -213,7 +223,8 @@ h2 {
 }
 
 .three-grid,
-.menu-grid {
+.menu-grid,
+.charm-list {
   margin-top: 14px;
   display: grid;
   gap: 12px;
@@ -242,9 +253,73 @@ h2 {
   color: var(--text-sub);
 }
 
-.link-card {
+.charm-section {
+  background: linear-gradient(180deg, rgba(19, 13, 9, 0.96) 0%, rgba(10, 8, 6, 0.96) 100%);
+}
+
+.charm-list {
+  margin-top: 18px;
+}
+
+.charm-item {
+  position: relative;
+  padding: 18px 16px 16px;
+  border-top: 1px solid rgba(208, 177, 126, 0.35);
+}
+
+.charm-no {
+  margin: 0;
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: rgba(235, 211, 173, 0.22);
+  letter-spacing: 0.06em;
+  line-height: 1;
+}
+
+.charm-item h3 {
+  margin: 8px 0 0;
+  color: #f2dfba;
+  font-size: 1.12rem;
+}
+
+.charm-item p {
+  margin: 8px 0 0;
+  color: var(--text-sub);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-links-section {
+  background: linear-gradient(160deg, rgba(27, 20, 15, 0.96) 0%, rgba(16, 12, 9, 0.96) 100%);
+}
+
+.page-links-grid .link-card {
   text-decoration: none;
   color: inherit;
+  transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease;
+}
+
+.page-links-grid .link-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(215, 180, 122, 0.55);
+  background: linear-gradient(160deg, rgba(45, 35, 26, 0.9) 0%, rgba(25, 20, 14, 0.9) 100%);
+}
+
+.link-more {
+  display: inline-block;
+  margin-top: 10px;
+  color: #f1d7a5;
+  font-size: 0.9rem;
+  font-weight: 700;
 }
 
 .menu-photo {
@@ -327,8 +402,7 @@ h2 {
     padding: 82px 24px 72px;
   }
 
-  .hero-cta,
-  .shop-cta {
+  .hero-cta {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     max-width: 860px;
   }
@@ -368,7 +442,6 @@ h2 {
     margin-top: 0;
   }
 }
-
 
 @media (max-width: 640px) {
   .menu-photo {
