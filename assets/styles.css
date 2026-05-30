@@ -1,0 +1,72 @@
+:root {
+  --bg: #faf8f5;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --muted: #78716c;
+  --accent: #c2410c;
+  --accent-hover: #9a3412;
+  --border: #e7e5e4;
+  --radius: 16px;
+  --shadow: 0 10px 40px rgba(28, 25, 23, 0.08);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Noto Sans JP', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+.container { width: min(1100px, 92%); margin: 0 auto; }
+.hero {
+  background: linear-gradient(135deg, #fff7ed 0%, #faf8f5 50%, #f5f5f4 100%);
+  padding: clamp(3rem, 8vw, 6rem) 0;
+}
+.hero-inner { text-align: center; }
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: #ffedd5;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+h1 { font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700; margin-bottom: 0.75rem; }
+.catch { font-size: clamp(1rem, 2.5vw, 1.25rem); color: var(--muted); max-width: 36rem; margin: 0 auto 1.5rem; }
+.btn {
+  display: inline-block;
+  padding: 0.85rem 1.75rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.15s, background 0.15s;
+}
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover { background: var(--accent-hover); transform: translateY(-1px); }
+.section { padding: clamp(2.5rem, 6vw, 4rem) 0; }
+.section-alt { background: var(--surface); }
+h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 1.25rem; }
+.benefits { list-style: none; display: grid; gap: 0.75rem; }
+@media (min-width: 640px) { .benefits { grid-template-columns: repeat(2, 1fr); } }
+.benefits li {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  box-shadow: var(--shadow);
+}
+.faq-list { display: grid; gap: 0.75rem; }
+.faq-item {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+}
+.faq-item summary { font-weight: 600; cursor: pointer; }
+.faq-item p { margin-top: 0.75rem; color: var(--muted); }
+.cta-section { text-align: center; }
+.cta-section p { color: var(--muted); margin-bottom: 1rem; }
+.footer { padding: 2rem 0; text-align: center; color: var(--muted); font-size: 0.875rem; border-top: 1px solid var(--border); }
