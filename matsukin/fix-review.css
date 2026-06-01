@@ -1,0 +1,28 @@
+/* PC readability fix for Matsukin A review cards */
+@media (min-width: 1024px) {
+  .review-section .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 16px !important;
+  }
+
+  .review-section .card {
+    padding: 18px !important;
+  }
+
+  .review-section .card h3 {
+    font-size: 1.12rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .review-section .card p,
+  .review-section .point-list {
+    font-size: .98rem;
+    line-height: 1.85;
+  }
+}
+
+@media (min-width: 1320px) {
+  .review-section .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
