@@ -19,9 +19,7 @@
       --max: 980px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -35,7 +33,7 @@
       background: #111;
       color: #fff;
       padding: 10px 18px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      border-bottom: 1px solid rgba(255,255,255,.15);
     }
 
     .topbar-inner {
@@ -51,11 +49,11 @@
     .brand {
       font-size: 1.02rem;
       font-weight: 800;
-      letter-spacing: 0.08em;
+      letter-spacing: .08em;
     }
 
     .project {
-      font-size: 0.78rem;
+      font-size: .78rem;
       color: #d9d9d9;
       text-align: right;
     }
@@ -74,15 +72,15 @@
 
     .hero-sub {
       margin: 0;
-      font-size: 0.92rem;
+      font-size: .92rem;
       color: #d7d7d7;
-      letter-spacing: 0.05em;
+      letter-spacing: .05em;
     }
 
     .hero-sub strong {
       color: #fff;
       font-size: 1.1em;
-      letter-spacing: 0.08em;
+      letter-spacing: .08em;
       margin-right: 8px;
     }
 
@@ -124,21 +122,9 @@
       border: 1px solid transparent;
     }
 
-    .button.primary {
-      background: var(--accent);
-      color: #fff;
-    }
-
-    .button.secondary {
-      background: transparent;
-      border-color: #cfcfcf;
-      color: #fff;
-    }
-
-    .button.ghost {
-      background: #fff;
-      color: #333;
-    }
+    .button.primary { background: var(--accent); color: #fff; }
+    .button.secondary { background: transparent; border-color: #cfcfcf; color: #fff; }
+    .button.ghost { background: #fff; color: #333; }
 
     main {
       width: 100%;
@@ -151,7 +137,7 @@
       background: var(--card);
       border: 1px solid var(--line);
       border-radius: 18px;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 14px rgba(0,0,0,.05);
       padding: 24px 18px;
       margin-bottom: 18px;
     }
@@ -164,10 +150,7 @@
       line-height: 1.4;
     }
 
-    p {
-      margin: 12px 0 0;
-      color: var(--sub);
-    }
+    p { margin: 12px 0 0; color: var(--sub); }
 
     .cards {
       margin-top: 14px;
@@ -188,10 +171,7 @@
       color: #2e2e2e;
     }
 
-    .card p {
-      margin-top: 6px;
-      color: #5f5f5f;
-    }
+    .card p { margin-top: 6px; color: #5f5f5f; }
 
     .sample-buttons {
       margin-top: 14px;
@@ -210,7 +190,7 @@
     .button.matsu-c { background: #7f271f; }
     .button.sol-a { background: #5f7f6b; }
     .button.sol-b { background: #4d7457; }
-    .button.sol-c { background: #9b6d79; }
+    .button.sol-c { background: #2f5140; }
 
     .price-list,
     .contact-list {
@@ -219,10 +199,7 @@
       color: #5a5a5a;
     }
 
-    .subservice {
-      background: #f8f7f4;
-      border-color: #e2dfd7;
-    }
+    .subservice { background: #f8f7f4; border-color: #e2dfd7; }
 
     .subservice .alert {
       margin-top: 12px;
@@ -231,14 +208,7 @@
       background: #fff;
       border-radius: 10px;
       color: #5f5a52;
-      font-size: 0.95rem;
-    }
-
-    .support-cta {
-      margin-top: 14px;
-      display: grid;
-      gap: 10px;
-      max-width: 460px;
+      font-size: .95rem;
     }
 
     footer {
@@ -249,40 +219,17 @@
     }
 
     @media (min-width: 760px) {
-      .hero {
-        padding: 70px 24px 60px;
-      }
-
-      .hero-cta {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        max-width: 760px;
-      }
-
-      main {
-        padding: 36px 24px 56px;
-      }
-
-      section {
-        padding: 30px 26px;
-      }
-
-      .cards {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .sample-buttons {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
+      .hero { padding: 70px 24px 60px; }
+      .hero-cta { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 760px; }
+      main { padding: 36px 24px 56px; }
+      section { padding: 30px 26px; }
+      .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .sample-buttons { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
 
     @media (min-width: 1080px) {
-      .sample-buttons {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-
-      .cards {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
+      .sample-buttons { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     }
   </style>
 </head>
@@ -338,14 +285,14 @@
 
     <section id="works">
       <h2>制作サンプル</h2>
-      <p>飲食店LPとトリミングサロンLPのデザインパターンを掲載しています。</p>
+      <p>価格・提案順に合わせて、A → B → C の順で見られるように整理しています。</p>
       <div class="sample-buttons">
         <a class="button matsu-a" href="./matsukin/">パターンA：力強いホルモン店風</a>
-        <a class="button matsu-b" href="./matsukin-premium/">パターンB：高級感・シネマティック風</a>
-        <a class="button matsu-c" href="./matsukin-casual/">パターンC：親しみやすい大衆酒場風</a>
+        <a class="button matsu-b" href="./matsukin-casual/">パターンB：親しみやすい大衆酒場風</a>
+        <a class="button matsu-c" href="./matsukin-premium/">パターンC：高級感・シネマティック風</a>
         <a class="button sol-a" href="./sol-dog-design/">パターンA：上質ミニマルサロン系</a>
-        <a class="button sol-b" href="./sol-dog-design-botanical/">パターンB：ボタニカル高級感系</a>
-        <a class="button sol-c" href="./sol-dog-design-cute/">パターンC：かわいい親しみやすい系</a>
+        <a class="button sol-b" href="./sol-dog-design-cute/">パターンB：ボタニカル上質サロン系</a>
+        <a class="button sol-c" href="./sol-dog-design-botanical/">パターンC：多層ページ・高級サロン系</a>
       </div>
     </section>
 
