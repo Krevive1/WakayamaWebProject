@@ -12,10 +12,11 @@
 .store-photo-card img{object-position:center center;}
 .photo-grid figure:first-child img{object-position:center center;}
 .content-panel.store-panel,
-.page-hero-panel.store-panel{
+.page-hero-panel.store-panel,
+.shop-hero-panel{
   background:
-    linear-gradient(135deg,rgba(7,13,10,.82),rgba(21,36,27,.58)),
-    url('./images/store.jpeg') center center / cover no-repeat;
+    linear-gradient(135deg,rgba(7,13,10,.84),rgba(21,36,27,.58)),
+    url('./images/store.jpeg') center center / cover no-repeat !important;
 }
 .works-photo-grid,
 .plant-photo-grid{
@@ -45,6 +46,7 @@
 }
 @media(min-width:1080px){
   .store-hero .hero-bg{background-position:center 48%;}
+  .shop-hero-panel{background-position:center 48%!important;}
   .store-photo-card{min-height:520px;}
   .store-photo-card img{min-height:520px;}
   .works-photo-grid figure{height:420px;}
@@ -53,6 +55,7 @@
 }
 @media(max-width:760px){
   .store-hero .hero-bg{background-position:center center;}
+  .shop-hero-panel{background-position:center center!important;}
   .store-hero .hero-overlay{background:linear-gradient(180deg,rgba(5,8,6,.88),rgba(5,8,6,.74));}
   .store-photo-card{min-height:260px;}
   .store-photo-card img{min-height:260px;}
