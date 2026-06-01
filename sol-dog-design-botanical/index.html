@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20260601-storephoto">
 </head>
 <body class="premium-page home-page">
   <header class="site-header">
@@ -24,7 +24,7 @@
     </div>
   </header>
 
-  <section class="hero">
+  <section class="hero store-hero">
     <div class="hero-bg" aria-hidden="true"></div>
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="hero-inner">
@@ -47,8 +47,8 @@
           <h2>ただ整えるだけではなく、ワンちゃんが落ち着ける時間までデザインする。</h2>
           <p class="lead">Sol dog designは、和歌山市西庄にある小型犬専門トリミングサロンです。小さな体のワンちゃんに合わせた施術、飼い主さまが相談しやすい導線、併設のGN PLANTがつくるボタニカルな雰囲気を一つの世界観として表現しています。</p>
         </div>
-        <figure class="image-card tall-image">
-          <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=1000&q=80" alt="小型犬のイメージ" loading="lazy">
+        <figure class="image-card tall-image store-photo-card">
+          <img src="./images/sol-gn-store.svg" alt="Sol dog designとGN PLANTの店舗外観" loading="lazy">
         </figure>
       </div>
     </section>
@@ -81,10 +81,10 @@
           <p class="kicker">Gallery</p>
           <h2>写真で伝える、サロンの空気感。</h2>
         </div>
-        <p class="lead small-lead">実店舗写真が入ると、営業提案時の説得力が大きく上がります。現在はサンプル画像で世界観を表現しています。</p>
+        <p class="lead small-lead">実店舗の外観写真をメインに使い、Sol dog designとGN PLANTの世界観が伝わる構成にしています。</p>
       </div>
       <div class="photo-grid">
-        <figure><img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=900&q=80" alt="ワンちゃんの仕上がりイメージ" loading="lazy"></figure>
+        <figure><img src="./images/sol-gn-store.svg" alt="Sol dog designとGN PLANTの店舗外観" loading="lazy"></figure>
         <figure><img src="https://images.unsplash.com/photo-1520412099551-62b6bafeb5bb?auto=format&fit=crop&w=900&q=80" alt="植物のある空間イメージ" loading="lazy"></figure>
         <figure><img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=900&q=80" alt="小型犬のケアイメージ" loading="lazy"></figure>
         <figure><img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=900&q=80" alt="ボタニカルな店舗イメージ" loading="lazy"></figure>
@@ -95,26 +95,10 @@
       <p class="kicker">Pages</p>
       <h2>詳しく見る</h2>
       <div class="four-grid page-links-grid">
-        <a class="link-card" href="./about.html">
-          <h3>サロン紹介</h3>
-          <p>小型犬専門サロンとしての考え方を見る</p>
-          <span class="link-more">詳しく見る →</span>
-        </a>
-        <a class="link-card" href="./menu.html">
-          <h3>メニュー</h3>
-          <p>シャンプー・カット・部分ケアを見る</p>
-          <span class="link-more">詳しく見る →</span>
-        </a>
-        <a class="link-card" href="./plant.html">
-          <h3>GN PLANT</h3>
-          <p>併設の植物販売ページを見る</p>
-          <span class="link-more">詳しく見る →</span>
-        </a>
-        <a class="link-card" href="./shop.html">
-          <h3>店舗概要</h3>
-          <p>住所・営業時間・予約導線を確認する</p>
-          <span class="link-more">詳しく見る →</span>
-        </a>
+        <a class="link-card" href="./about.html"><h3>サロン紹介</h3><p>小型犬専門サロンとしての考え方を見る</p><span class="link-more">詳しく見る →</span></a>
+        <a class="link-card" href="./menu.html"><h3>メニュー</h3><p>シャンプー・カット・部分ケアを見る</p><span class="link-more">詳しく見る →</span></a>
+        <a class="link-card" href="./plant.html"><h3>GN PLANT</h3><p>併設の植物販売ページを見る</p><span class="link-more">詳しく見る →</span></a>
+        <a class="link-card" href="./shop.html"><h3>店舗概要</h3><p>住所・営業時間・予約導線を確認する</p><span class="link-more">詳しく見る →</span></a>
       </div>
     </section>
   </main>
@@ -127,15 +111,6 @@
       <p class="sample-note">このページはKREVIVE / 和歌山Webプロジェクトの営業提案用サンプルです。掲載内容は店舗確認後に正式反映します。</p>
     </div>
   </footer>
-
-  <script>
-    const items = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) entry.target.classList.add('is-visible');
-      });
-    }, { threshold: 0.2 });
-    items.forEach((item) => observer.observe(item));
-  </script>
+  <script>const items=document.querySelectorAll('.reveal');const observer=new IntersectionObserver((entries)=>{entries.forEach((entry)=>{if(entry.isIntersecting)entry.target.classList.add('is-visible');});},{threshold:.2});items.forEach((item)=>observer.observe(item));</script>
 </body>
 </html>
