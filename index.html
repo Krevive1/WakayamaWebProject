@@ -174,15 +174,39 @@
     .card p { margin-top: 6px; color: #5f5f5f; }
 
     .sample-buttons {
-      margin-top: 14px;
+      margin-top: 18px;
       display: grid;
-      gap: 10px;
+      gap: 14px;
     }
 
-    .sample-buttons .button {
+    .sample-card {
+      border: 1px solid #eee5d8;
+      border-radius: 14px;
+      background: #fffcf8;
+      padding: 12px;
+      text-align: center;
+      box-shadow: 0 3px 10px rgba(0,0,0,.04);
+    }
+
+    .sample-card img {
+      width: 86px;
+      height: 86px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto 10px;
+      background: #fff;
+      padding: 4px;
+      border: 1px solid #ded8ce;
+      border-radius: 8px;
+    }
+
+    .sample-card .button {
       margin: 0;
       color: #fff;
       border: none;
+      font-size: .9rem;
+      min-height: 46px;
+      padding: 10px 12px;
     }
 
     .button.matsu-a { background: #c0392b; }
@@ -285,14 +309,32 @@
 
     <section id="works">
       <h2>制作サンプル</h2>
-      <p>価格・提案順に合わせて、A → B → C の順で見られるように整理しています。</p>
+      <p>価格・提案順に合わせて、A → B → C の順で見られるように整理しています。PCで見せながら、お客様のスマホでもQRから確認できます。</p>
       <div class="sample-buttons">
-        <a class="button matsu-a" href="./matsukin/">パターンA：力強いホルモン店風</a>
-        <a class="button matsu-b" href="./matsukin-casual/">パターンB：親しみやすい大衆酒場風</a>
-        <a class="button matsu-c" href="./matsukin-premium/">パターンC：高級感・シネマティック風</a>
-        <a class="button sol-a" href="./sol-dog-design/">パターンA：上質ミニマルサロン系</a>
-        <a class="button sol-b" href="./sol-dog-design-cute/">パターンB：ボタニカル上質サロン系</a>
-        <a class="button sol-c" href="./sol-dog-design-botanical/">パターンC：多層ページ・高級サロン系</a>
+        <div class="sample-card">
+          <img src="assets/qr/matsukin-a.png" alt="松金 パターンA QRコード" loading="lazy">
+          <a class="button matsu-a" href="./matsukin/">パターンA：力強いホルモン店風</a>
+        </div>
+        <div class="sample-card">
+          <img src="assets/qr/matsukin-b.png" alt="松金 パターンB QRコード" loading="lazy">
+          <a class="button matsu-b" href="./matsukin-casual/">パターンB：親しみやすい大衆酒場風</a>
+        </div>
+        <div class="sample-card">
+          <img src="assets/qr/matsukin-c.png" alt="松金 パターンC QRコード" loading="lazy">
+          <a class="button matsu-c" href="./matsukin-premium/">パターンC：高級感・シネマティック風</a>
+        </div>
+        <div class="sample-card">
+          <img src="assets/qr/sol-a.png" alt="ソルドッグ パターンA QRコード" loading="lazy">
+          <a class="button sol-a" href="./sol-dog-design/">パターンA：上質ミニマルサロン系</a>
+        </div>
+        <div class="sample-card">
+          <img src="assets/qr/sol-b.png" alt="ソルドッグ パターンB QRコード" loading="lazy">
+          <a class="button sol-b" href="./sol-dog-design-cute/">パターンB：ボタニカル上質サロン系</a>
+        </div>
+        <div class="sample-card">
+          <img src="assets/qr/sol-c.png" alt="ソルドッグ パターンC QRコード" loading="lazy">
+          <a class="button sol-c" href="./sol-dog-design-botanical/">パターンC：多層ページ・高級サロン系</a>
+        </div>
       </div>
     </section>
 
