@@ -1,0 +1,38 @@
+/* Shared Matsukin spirit image section */
+.matsukin-spirit {
+  width: min(1100px, calc(100% - 40px));
+  margin: clamp(32px, 5vw, 72px) auto;
+}
+
+.matsukin-spirit h2 {
+  margin: 0 0 18px;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  line-height: 1.25;
+  letter-spacing: .04em;
+}
+
+.matsukin-spirit img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, .28);
+  background: #ead1aa;
+}
+
+.matsukin-spirit-note {
+  margin: 12px 0 0;
+  font-size: .9rem;
+  opacity: .78;
+}
+
+@media (max-width: 640px) {
+  .matsukin-spirit {
+    width: min(100% - 24px, 1100px);
+    margin: 28px auto;
+  }
+
+  .matsukin-spirit img {
+    border-radius: 12px;
+  }
+}
