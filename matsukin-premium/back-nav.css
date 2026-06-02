@@ -1,0 +1,54 @@
+/* Bottom navigation for Matsukin C sub pages */
+.bottom-back-nav {
+  margin: 28px auto 0;
+  padding: 20px 18px;
+  background: linear-gradient(135deg, #20120c 0%, #6f1e18 58%, #20120c 100%);
+  border: 4px solid #fff1d0;
+  border-radius: 18px;
+  box-shadow: 10px 10px 0 rgba(201, 50, 36, 0.28), 0 18px 42px rgba(23, 16, 12, 0.26);
+  text-align: center;
+}
+
+.bottom-back-nav p {
+  margin: 0 0 12px;
+  color: #fff1d0;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+
+.bottom-back-buttons {
+  display: grid;
+  gap: 10px;
+}
+
+.bottom-back-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 18px;
+  color: #fff8e6 !important;
+  text-decoration: none;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  background: linear-gradient(180deg, #d43a2c 0%, #9f231b 100%);
+  border: 3px solid #fff1d0;
+  border-radius: 999px;
+  box-shadow: 0 7px 0 #4c130f;
+}
+
+.bottom-back-button.secondary {
+  color: #24140c !important;
+  background: linear-gradient(180deg, #ffcf78 0%, #d89022 100%);
+  border-color: #24140c;
+  box-shadow: 0 7px 0 #5e3510;
+}
+
+@media (min-width: 720px) {
+  .bottom-back-buttons {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 720px;
+    margin: 0 auto;
+  }
+}
