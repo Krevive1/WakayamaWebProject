@@ -1,0 +1,49 @@
+/* Matsukin A menu photo and price cards */
+.menu-list.menu-photo-list {
+  gap: 12px;
+}
+
+.menu-list.menu-photo-list li {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  padding: 10px;
+}
+
+.menu-list.menu-photo-list img {
+  width: 92px;
+  height: 92px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  background: #ddd;
+}
+
+.menu-list.menu-photo-list strong {
+  display: block;
+  color: var(--accent-deep);
+  font-size: 1.02rem;
+  line-height: 1.35;
+}
+
+.menu-list.menu-photo-list span {
+  display: block;
+  margin-top: 4px;
+  font-size: .95rem;
+  color: #2d2d2d;
+}
+
+.menu-list.menu-photo-list small {
+  display: block;
+  margin-top: 4px;
+  font-size: .8rem;
+  color: #6a5a52;
+  font-weight: 600;
+}
+
+@media (min-width: 1024px) {
+  .menu-list.menu-photo-list {
+    grid-template-columns: 1fr !important;
+  }
+}
