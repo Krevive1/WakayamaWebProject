@@ -1,0 +1,58 @@
+/* Bottom navigation for Sol dog design C sub pages */
+.sol-bottom-nav {
+  margin: 28px auto 0;
+  padding: 20px 18px;
+  background: linear-gradient(135deg, rgba(251,250,246,0.94), rgba(238,243,243,0.92));
+  border: 1px solid rgba(95, 120, 130, 0.24);
+  border-radius: 24px;
+  box-shadow: 0 18px 48px rgba(75, 64, 52, 0.12);
+  text-align: center;
+}
+
+.sol-bottom-nav p {
+  margin: 0 0 12px;
+  color: #5f7882;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+}
+
+.sol-bottom-buttons {
+  display: grid;
+  gap: 10px;
+}
+
+.sol-bottom-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 18px;
+  color: #ffffff !important;
+  text-decoration: none;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  background: linear-gradient(95deg, #5f7882, #8fa5ad);
+  border: 1px solid rgba(95, 120, 130, 0.28);
+  border-radius: 999px;
+  box-shadow: 0 12px 26px rgba(95, 120, 130, 0.18);
+}
+
+.sol-bottom-button.secondary {
+  color: #2f3130 !important;
+  background: rgba(255, 255, 255, 0.78);
+  border-color: rgba(95, 120, 130, 0.28);
+  box-shadow: none;
+}
+
+.sol-bottom-button:hover {
+  transform: translateY(-2px);
+}
+
+@media (min-width: 720px) {
+  .sol-bottom-buttons {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 720px;
+    margin: 0 auto;
+  }
+}
