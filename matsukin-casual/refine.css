@@ -1,0 +1,14 @@
+/* Matsukin B refinement: single exterior photo and clearer first-visit copy support */
+.exterior-grid.single-exterior {
+  grid-template-columns: 1fr !important;
+}
+
+.exterior-grid.single-exterior .photo-card img {
+  height: clamp(230px, 42vw, 420px);
+  object-fit: cover;
+}
+
+.exterior-grid.single-exterior .photo-card {
+  max-width: 860px;
+  margin: 0 auto;
+}
