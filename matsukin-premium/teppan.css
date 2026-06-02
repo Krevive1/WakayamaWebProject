@@ -116,8 +116,7 @@ html body.premium-page {
 
 .premium-page .section-block,
 .premium-page .content-panel,
-.premium-page .charm-section,
-.premium-page .page-links-section {
+.premium-page .charm-section {
   position: relative !important;
   background: linear-gradient(180deg, #fff4d8 0%, #f7d9a4 100%) !important;
   border: 3px solid var(--c-black) !important;
@@ -164,7 +163,6 @@ html body.premium-page {
 }
 
 .premium-page .info-card,
-.premium-page .link-card,
 .premium-page .menu-card,
 .premium-page .charm-item {
   background: #fff6e1 !important;
@@ -202,6 +200,117 @@ html body.premium-page {
   font-weight: 900 !important;
 }
 
+.premium-page .nav-hub {
+  margin-bottom: 26px !important;
+  background: linear-gradient(135deg, #20120c 0%, #6f1e18 58%, #20120c 100%) !important;
+  border: 4px solid #fff1d0 !important;
+  box-shadow: 12px 12px 0 rgba(201, 50, 36, 0.32), 0 20px 46px rgba(23, 16, 12, 0.32) !important;
+}
+
+.premium-page .nav-hub::before {
+  background: #fff1d0 !important;
+}
+
+.premium-page .nav-hub-label {
+  display: inline-block !important;
+  margin: 0 0 8px !important;
+  padding: 5px 12px !important;
+  color: #20120c !important;
+  background: #fff1d0 !important;
+  border-radius: 999px !important;
+  font-size: 0.82rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.06em !important;
+}
+
+.premium-page .nav-hub h2,
+.premium-page .nav-hub .nav-hub-lead {
+  color: #fff1d0 !important;
+}
+
+.premium-page .nav-hub h2::first-letter {
+  color: #fff1d0 !important;
+}
+
+.premium-page .nav-hub-lead {
+  margin: 8px 0 0 !important;
+  font-weight: 900 !important;
+}
+
+.premium-page .page-links-grid {
+  margin-top: 18px !important;
+}
+
+.premium-page .nav-button {
+  display: block !important;
+  position: relative !important;
+  text-decoration: none !important;
+  padding: 18px 18px 20px !important;
+  color: #fff8e6 !important;
+  background: linear-gradient(180deg, #d43a2c 0%, #9f231b 100%) !important;
+  border: 3px solid #fff1d0 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 0 #4c130f, 0 16px 28px rgba(0, 0, 0, 0.26) !important;
+  transform: translateY(0) !important;
+  transition: transform 0.18s ease, box-shadow 0.18s ease !important;
+}
+
+.premium-page .nav-button:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 12px 0 #4c130f, 0 20px 34px rgba(0, 0, 0, 0.3) !important;
+}
+
+.premium-page .nav-button-primary {
+  background: linear-gradient(180deg, #ffcf78 0%, #d89022 100%) !important;
+  color: #24140c !important;
+  border-color: #24140c !important;
+  box-shadow: 0 8px 0 #5e3510, 0 16px 28px rgba(0, 0, 0, 0.26) !important;
+}
+
+.premium-page .nav-button-label {
+  display: inline-grid !important;
+  place-items: center !important;
+  width: 38px !important;
+  height: 38px !important;
+  margin-bottom: 10px !important;
+  border-radius: 50% !important;
+  background: #fff1d0 !important;
+  color: var(--c-red-dark) !important;
+  font-weight: 900 !important;
+  border: 2px solid currentColor !important;
+}
+
+.premium-page .nav-button h3 {
+  margin: 0 !important;
+  color: inherit !important;
+  font-size: 1.22rem !important;
+}
+
+.premium-page .nav-button p {
+  margin: 6px 0 0 !important;
+  color: inherit !important;
+  opacity: 0.92 !important;
+  font-weight: 800 !important;
+}
+
+.premium-page .nav-button .link-more {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  margin-top: 14px !important;
+  padding: 10px 12px !important;
+  border-radius: 999px !important;
+  background: #fff8e6 !important;
+  color: #8f1f18 !important;
+  font-weight: 900 !important;
+}
+
+.premium-page .nav-button-primary .link-more {
+  background: #24140c !important;
+  color: #fff8e6 !important;
+}
+
 .premium-page .matsukin-spirit {
   width: 100% !important;
   margin: 0 0 22px !important;
@@ -232,5 +341,9 @@ html body.premium-page {
   .premium-page .site-header-inner {
     align-items: flex-start !important;
     flex-direction: column !important;
+  }
+
+  .premium-page .nav-button {
+    padding: 16px !important;
   }
 }
