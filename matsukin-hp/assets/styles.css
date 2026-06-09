@@ -387,11 +387,6 @@ p + p {
   margin: 0 auto;
 }
 
-.about-movie .cinematic__frame--contained {
-  width: 100%;
-  max-width: none;
-}
-
 .cinematic__frame video {
   width: 100%;
   aspect-ratio: 16 / 9;
