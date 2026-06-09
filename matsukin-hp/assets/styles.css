@@ -361,6 +361,11 @@ p + p {
   aspect-ratio: 4 / 3;
 }
 
+.feature-grid--single {
+  max-width: 760px;
+  margin-inline: auto;
+}
+
 .copy-panel {
   padding-top: 12px;
 }
