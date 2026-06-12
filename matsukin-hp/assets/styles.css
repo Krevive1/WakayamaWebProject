@@ -580,12 +580,35 @@ p + p {
   font-size: 13px;
 }
 
+.menu-subgroup {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(92, 55, 32, 0.14);
+}
+
+.menu-subgroup--first {
+  margin-top: 14px;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.menu-subgroup h4 {
+  color: rgba(92, 55, 32, 0.88);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
 .menu-items {
   display: grid;
   gap: 0;
   margin: 12px 0 0;
   padding: 0;
   list-style: none;
+}
+
+.menu-items--sub {
+  margin-top: 8px;
 }
 
 .menu-items li {
@@ -614,6 +637,12 @@ p + p {
   font-weight: 700;
   text-align: right;
   white-space: nowrap;
+}
+
+.menu-item--indent span:first-child {
+  padding-left: 18px;
+  color: rgba(51, 38, 31, 0.82);
+  font-weight: 600;
 }
 
 .shop-info {
