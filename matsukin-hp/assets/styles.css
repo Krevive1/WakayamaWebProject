@@ -536,6 +536,10 @@ p + p {
   border-top: 1px solid rgba(92, 55, 32, 0.18);
 }
 
+.menu-catalog--drinks {
+  margin-top: 72px;
+}
+
 .menu-catalog__heading {
   max-width: 760px;
   margin: 0 auto 30px;
@@ -889,6 +893,10 @@ p + p {
     padding-top: 58px;
   }
 
+  .menu-catalog--drinks {
+    margin-top: 88px;
+  }
+
   .menu-catalog__heading {
     text-align: center;
   }
@@ -965,6 +973,10 @@ p + p {
   .menu-catalog {
     margin-top: 44px;
     padding-top: 36px;
+  }
+
+  .menu-catalog--drinks {
+    margin-top: 56px;
   }
 
   .menu-category {
