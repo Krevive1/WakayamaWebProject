@@ -436,6 +436,33 @@ p + p {
   border-color: rgba(44, 33, 25, 0.28);
 }
 
+.link-grid--home-guide .link-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.link-grid--home-guide .link-card::before,
+.link-grid--home-guide .link-card::after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  content: "";
+  pointer-events: none;
+}
+
+.link-grid--home-guide .link-card::before {
+  background: rgba(0, 0, 0, 0.24);
+}
+
+.link-grid--home-guide .link-card::after {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.72) 0%,
+    rgba(0, 0, 0, 0.32) 44%,
+    rgba(0, 0, 0, 0.04) 100%
+  );
+}
+
 .link-card {
   display: grid;
   min-height: 320px;
@@ -448,6 +475,13 @@ p + p {
   height: 100%;
   min-height: 220px;
   object-fit: cover;
+}
+
+.link-grid--home-guide .link-card__body {
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(180deg, rgba(16, 10, 7, 0.88), rgba(16, 10, 7, 0.95));
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.82);
 }
 
 .link-card__body {
