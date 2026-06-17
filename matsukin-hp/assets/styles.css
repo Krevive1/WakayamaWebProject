@@ -1043,6 +1043,10 @@ p + p {
     white-space: normal;
   }
 
+  .dish-card--reba img {
+    object-position: 38% 64%;
+  }
+
   .page-links {
     width: min(100% - 32px, 960px);
     margin: 48px auto 112px;

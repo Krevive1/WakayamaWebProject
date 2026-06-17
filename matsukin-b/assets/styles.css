@@ -924,6 +924,10 @@ p + p {
   .dish-card--text-top .dish-card__body {
     padding: 20px 18px 82px;
   }
+
+  .dish-card--reba img {
+    object-position: 38% 64%;
+  }
 }
 
 @media (max-width: 380px) {
