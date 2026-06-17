@@ -1043,8 +1043,16 @@ p + p {
     white-space: normal;
   }
 
+  .dish-card--reba {
+    aspect-ratio: 4 / 3;
+    min-height: 0;
+  }
+
   .dish-card--reba img {
-    object-position: 38% 64%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
   }
 
   .page-links {
