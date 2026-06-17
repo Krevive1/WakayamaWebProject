@@ -215,6 +215,10 @@ p + p {
   white-space: nowrap;
 }
 
+.pc-only-break {
+  display: inline;
+}
+
 .access__actions {
   display: flex;
   flex-wrap: wrap;
@@ -882,6 +886,10 @@ p + p {
 }
 
 @media (max-width: 699px) {
+  .pc-only-break {
+    display: none;
+  }
+
   body {
     padding-bottom: 86px;
   }
