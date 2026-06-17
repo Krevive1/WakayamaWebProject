@@ -312,6 +312,11 @@ p + p {
   margin-top: 18px;
 }
 
+.menu-scene-copy {
+  display: grid;
+  gap: 2px;
+}
+
 .section--cream p {
   color: #3e3228;
 }
