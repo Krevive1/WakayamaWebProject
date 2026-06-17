@@ -237,12 +237,14 @@ p + p {
 }
 
 .page-hero__lead {
-  max-width: 680px;
+  max-width: 860px;
   margin-top: 24px;
   color: rgba(255, 250, 240, 0.86);
   font-family: var(--serif);
   font-size: 18px;
   line-height: 1.9;
+  line-break: strict;
+  word-break: normal;
 }
 
 .section {
@@ -683,6 +685,8 @@ p + p {
 .menu-items span:first-child {
   min-width: 0;
   font-weight: 700;
+  line-break: strict;
+  word-break: normal;
 }
 
 .menu-items span:last-child {
@@ -848,6 +852,18 @@ p + p {
 
 .no-break {
   white-space: nowrap;
+}
+
+@media (max-width: 1499px) {
+  .menu-items li {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 3px;
+  }
+
+  .menu-items span:last-child {
+    text-align: left;
+    white-space: normal;
+  }
 }
 
 .js-enabled [data-reveal] {
