@@ -859,6 +859,10 @@ p + p {
   white-space: nowrap;
 }
 
+.pc-only-break {
+  display: none;
+}
+
 @media (max-width: 1499px) {
   .menu-items li {
     grid-template-columns: minmax(0, 1fr);
@@ -898,6 +902,12 @@ p + p {
   .js-enabled [data-reveal] {
     opacity: 1;
     transform: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .pc-only-break {
+    display: inline;
   }
 }
 
