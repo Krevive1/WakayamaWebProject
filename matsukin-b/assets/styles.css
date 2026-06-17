@@ -783,10 +783,6 @@ p + p {
     gap: 64px;
   }
 
-  .owner__image {
-    min-height: 420px;
-  }
-
   .taste__panel {
     padding: 46px 54px;
     background: rgba(23, 20, 17, 0.62);
@@ -802,11 +798,6 @@ p + p {
   .plate__layout,
   .retro__layout {
     align-items: center;
-  }
-
-  .plate__image,
-  .retro__image {
-    min-height: 420px;
   }
 
   .dish-list {
@@ -874,6 +865,12 @@ p + p {
 
   .section__heading--center .eyebrow {
     justify-content: center;
+  }
+
+  .owner__image,
+  .plate__image,
+  .retro__image {
+    min-height: min(420px, 31vw);
   }
 
   .fixed-cta {
