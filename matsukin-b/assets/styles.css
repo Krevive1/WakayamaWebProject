@@ -429,19 +429,13 @@ p + p {
   gap: 42px;
 }
 
-.owner__media {
-  position: relative;
-  display: grid;
-  gap: 14px;
-}
-
-.owner__image--main {
-  aspect-ratio: 4 / 5;
-}
-
-.owner__image--sub {
-  aspect-ratio: 9 / 7;
+.owner__image {
+  aspect-ratio: 4 / 3;
   border: 1px solid var(--line-dark);
+}
+
+.owner__image img {
+  object-position: center center;
 }
 
 .owner__content {
@@ -789,18 +783,8 @@ p + p {
     gap: 64px;
   }
 
-  .owner__media {
-    grid-template-columns: 0.72fr 0.28fr;
-    align-items: end;
-  }
-
-  .owner__image--main {
-    min-height: 560px;
-  }
-
-  .owner__image--sub {
-    min-height: 280px;
-    transform: translateY(36px);
+  .owner__image {
+    min-height: 420px;
   }
 
   .taste__panel {
