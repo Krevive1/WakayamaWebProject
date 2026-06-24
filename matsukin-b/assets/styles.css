@@ -357,7 +357,7 @@ p + p {
   color: rgba(255, 250, 240, 0.82);
 }
 
-.about__grid,
+.about__layout,
 .regulars__grid,
 .location__layout,
 .plate__layout,
@@ -365,10 +365,6 @@ p + p {
 .access__grid {
   display: grid;
   gap: 34px;
-}
-
-.about__grid {
-  align-items: start;
 }
 
 .cinematic .section__inner {
@@ -391,12 +387,8 @@ p + p {
   background: #080706;
 }
 
-.about__text {
-  padding: 0;
-}
-
-.about__media .eyebrow {
-  margin-bottom: 12px;
+.about__content {
+  padding-top: 10px;
 }
 
 .about__image,
@@ -424,7 +416,7 @@ p + p {
 }
 
 .about__image {
-  aspect-ratio: 5 / 4;
+  aspect-ratio: 4 / 3;
 }
 
 .about__image figcaption {
@@ -773,7 +765,7 @@ p + p {
     font-size: 38px;
   }
 
-  .about__grid,
+  .about__layout,
   .regulars__grid,
   .location__layout,
   .plate__layout,
@@ -781,10 +773,6 @@ p + p {
   .access__grid {
     grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
     gap: 56px;
-  }
-
-  .about__text {
-    align-self: start;
   }
 
   .owner__layout {
@@ -805,6 +793,7 @@ p + p {
     margin-left: auto;
   }
 
+  .about__layout,
   .plate__layout,
   .retro__layout {
     align-items: center;
@@ -878,6 +867,7 @@ p + p {
   }
 
   .owner__image,
+  .about__image,
   .plate__image,
   .retro__image {
     min-height: min(420px, 31vw);
