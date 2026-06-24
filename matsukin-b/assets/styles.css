@@ -388,8 +388,11 @@ p + p {
 }
 
 .about__text {
-  padding: 26px 0 0;
-  border-top: 1px solid var(--line-light);
+  padding: 0;
+}
+
+.about__media .eyebrow {
+  margin-bottom: 12px;
 }
 
 .about__image,
@@ -777,8 +780,7 @@ p + p {
   }
 
   .about__text {
-    align-self: end;
-    padding-top: 34px;
+    align-self: start;
   }
 
   .owner__layout {
