@@ -367,6 +367,10 @@ p + p {
   gap: 34px;
 }
 
+.about__grid {
+  align-items: start;
+}
+
 .cinematic .section__inner {
   width: 100%;
   max-width: none;
