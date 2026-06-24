@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://krevive1.github.io/WakayamaWebProject/matsukin-b/sitemap.xml
