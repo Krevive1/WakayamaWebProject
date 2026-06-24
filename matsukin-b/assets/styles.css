@@ -576,6 +576,16 @@ p + p {
   aspect-ratio: 4 / 3;
 }
 
+.location__photos--single figure {
+  aspect-ratio: auto;
+}
+
+.location__photos--single img {
+  display: block;
+  height: auto;
+  object-fit: contain;
+}
+
 .retro__image {
   aspect-ratio: 4 / 3;
   border: 1px solid var(--line-dark);
@@ -823,8 +833,17 @@ p + p {
     align-items: end;
   }
 
+  .location__photos--single {
+    grid-template-columns: 1fr;
+    align-items: stretch;
+  }
+
   .location__photos figure:first-child {
     transform: translateY(34px);
+  }
+
+  .location__photos--single figure:first-child {
+    transform: none;
   }
 
   .shop-info > div {
