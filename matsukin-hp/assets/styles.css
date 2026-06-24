@@ -369,6 +369,16 @@ p + p {
   aspect-ratio: 4 / 3;
 }
 
+.photo-frame--natural {
+  aspect-ratio: auto;
+}
+
+.photo-frame--natural img {
+  height: auto;
+  object-fit: contain;
+  object-position: center top;
+}
+
 .feature-grid--single {
   max-width: 760px;
   margin-inline: auto;
