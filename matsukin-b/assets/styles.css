@@ -877,6 +877,8 @@ p + p {
   }
 
   .location__image {
+    width: 88%;
+    margin-inline: auto;
     min-height: 0;
   }
 
