@@ -394,7 +394,6 @@ p + p {
 .about__image,
 .regulars__image,
 .taste__image,
-.location__photos figure,
 .plate__image,
 .retro__image,
 .owner__image {
@@ -406,7 +405,6 @@ p + p {
 .about__image img,
 .regulars__image img,
 .taste__image img,
-.location__photos img,
 .plate__image img,
 .retro__image img,
 .owner__image img,
@@ -565,25 +563,6 @@ p + p {
 .regulars__image {
   aspect-ratio: 4 / 3;
   border: 1px solid var(--line-dark);
-}
-
-.location__photos {
-  display: grid;
-  gap: 16px;
-}
-
-.location__photos figure {
-  aspect-ratio: 4 / 3;
-}
-
-.location__photos--single figure {
-  aspect-ratio: auto;
-}
-
-.location__photos--single img {
-  display: block;
-  height: auto;
-  object-fit: contain;
 }
 
 .retro__image {
@@ -804,6 +783,7 @@ p + p {
   }
 
   .about__layout,
+  .location__layout,
   .plate__layout,
   .retro__layout {
     align-items: center;
@@ -826,24 +806,6 @@ p + p {
 
   .dish-card--wide img {
     aspect-ratio: 16 / 9;
-  }
-
-  .location__photos {
-    grid-template-columns: 1fr 1fr;
-    align-items: end;
-  }
-
-  .location__photos--single {
-    grid-template-columns: 1fr;
-    align-items: stretch;
-  }
-
-  .location__photos figure:first-child {
-    transform: translateY(34px);
-  }
-
-  .location__photos--single figure:first-child {
-    transform: none;
   }
 
   .shop-info > div {
