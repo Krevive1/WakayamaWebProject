@@ -3,40 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KREVIVE | 和歌山Webプロジェクト</title>
+  <title>KREVIVE｜和歌山のWeb制作・更新・修正</title>
+  <meta name="description" content="KREVIVEは和歌山を拠点にWebサイト制作・LP制作・既存サイトの軽微な修正やスポットコーディングに対応しています。制作会社さまのスポット対応や外部パートナーのご相談も承ります。">
+  <link rel="canonical" href="https://krevive1.github.io/WakayamaWebProject/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="KREVIVE｜和歌山のWeb制作・更新・修正">
+  <meta property="og:description" content="Webサイト制作・LP制作・既存サイトの軽微な修正やスポットコーディングに、必要なときに必要な分だけ対応します。">
+  <meta property="og:url" content="https://krevive1.github.io/WakayamaWebProject/">
+  <meta property="og:image" content="https://krevive1.github.io/WakayamaWebProject/assets/ogp.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" sizes="512x512" href="./assets/favicon-512.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16.png">
+  <link rel="apple-touch-icon" href="./assets/favicon-180.png">
+
   <style>
     :root {
-      --bg: #f7f5ef;
-      --bg-soft: #eef4ed;
+      --bg: #f7f6f2;
+      --bg-soft: #eef2f1;
       --card: #ffffff;
-      --text: #222222;
-      --sub: #5d5d5d;
-      --line: #e5e2db;
-      --brand: #111111;
-      --accent: #c4512a;
-      --accent-soft: #9f3d1f;
-      --green: #5f7f6b;
-      --max: 980px;
+      --text: #1c2430;
+      --sub: #565f6b;
+      --line: #e2e2dc;
+      --ink: #101d2b;
+      --accent: #3a7c8c;
+      --accent-dark: #2b5f6c;
+      --max: 960px;
     }
 
     * { box-sizing: border-box; }
 
+    html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
-      background: linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
       color: var(--text);
       line-height: 1.85;
     }
 
-    .topbar {
-      background: #111;
-      color: #fff;
-      padding: 10px 18px;
-      border-bottom: 1px solid rgba(255,255,255,.15);
+    a { color: var(--accent-dark); }
+
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: auto;
+    }
+    .skip-link:focus {
+      left: 12px;
+      top: 12px;
+      background: #fff;
+      padding: 8px 12px;
+      border-radius: 8px;
+      z-index: 100;
     }
 
-    .topbar-inner {
+    header.site-header {
+      background: var(--ink);
+      color: #fff;
+      padding: 14px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .site-header-inner {
       width: 100%;
       max-width: var(--max);
       margin: 0 auto;
@@ -47,21 +81,28 @@
     }
 
     .brand {
-      font-size: 1.02rem;
+      font-size: 1.1rem;
       font-weight: 800;
-      letter-spacing: .08em;
+      letter-spacing: .06em;
+      color: #fff;
+      text-decoration: none;
     }
 
-    .project {
-      font-size: .78rem;
-      color: #d9d9d9;
-      text-align: right;
+    .site-nav {
+      display: none;
+    }
+
+    .site-nav a {
+      color: #dfe6e6;
+      text-decoration: none;
+      font-size: .88rem;
+      margin-left: 20px;
     }
 
     .hero {
-      background: #151515;
+      background: var(--ink);
       color: #fff;
-      padding: 54px 20px 44px;
+      padding: 48px 20px 44px;
     }
 
     .hero-inner {
@@ -70,40 +111,36 @@
       margin: 0 auto;
     }
 
-    .hero-sub {
+    .hero-eyebrow {
       margin: 0;
-      font-size: .92rem;
-      color: #d7d7d7;
-      letter-spacing: .05em;
-    }
-
-    .hero-sub strong {
-      color: #fff;
-      font-size: 1.1em;
-      letter-spacing: .08em;
-      margin-right: 8px;
-    }
-
-    .tagline {
-      margin: 10px 0 0;
-      font-size: 1rem;
-      color: #f0ece4;
+      font-size: .82rem;
+      letter-spacing: .1em;
+      color: #a9c6cc;
     }
 
     .hero h1 {
-      margin: 20px 0 12px;
-      font-size: clamp(1.8rem, 6.2vw, 3rem);
-      line-height: 1.3;
+      margin: 14px 0 16px;
+      font-size: clamp(1.7rem, 6vw, 2.6rem);
+      line-height: 1.45;
+      font-weight: 800;
     }
 
     .hero p {
       margin: 0;
-      max-width: 52rem;
-      color: #dcdcdc;
+      max-width: 42rem;
+      color: #d7dbde;
+    }
+
+    .hero-note {
+      margin-top: 16px;
+      font-size: .92rem;
+      color: #b9c9cc;
+      border-left: 3px solid var(--accent);
+      padding-left: 10px;
     }
 
     .hero-cta {
-      margin-top: 22px;
+      margin-top: 26px;
       display: grid;
       gap: 10px;
     }
@@ -120,274 +157,319 @@
       padding: 12px 18px;
       text-align: center;
       border: 1px solid transparent;
+      font-size: .96rem;
     }
 
     .button.primary { background: var(--accent); color: #fff; }
-    .button.secondary { background: transparent; border-color: #cfcfcf; color: #fff; }
-    .button.ghost { background: #fff; color: #333; }
+    .button.secondary { background: transparent; border-color: #7c8f92; color: #fff; }
 
     main {
       width: 100%;
       max-width: var(--max);
       margin: 0 auto;
-      padding: 30px 20px 44px;
+      padding: 30px 20px 20px;
     }
 
     section {
       background: var(--card);
       border: 1px solid var(--line);
       border-radius: 18px;
-      box-shadow: 0 4px 14px rgba(0,0,0,.05);
-      padding: 24px 18px;
+      box-shadow: 0 4px 14px rgba(16,29,43,.05);
+      padding: 26px 20px;
       margin-bottom: 18px;
+      scroll-margin-top: 70px;
+    }
+
+    section.plain {
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      padding: 6px 4px 0;
     }
 
     h2 {
       margin: 0;
-      font-size: clamp(1.28rem, 4.6vw, 1.8rem);
+      font-size: clamp(1.24rem, 4.4vw, 1.6rem);
       border-left: 5px solid var(--accent);
-      padding-left: 10px;
+      padding-left: 12px;
       line-height: 1.4;
     }
 
-    p { margin: 12px 0 0; color: var(--sub); }
+    h2 .en {
+      display: block;
+      font-size: .68rem;
+      letter-spacing: .12em;
+      color: var(--sub);
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    section > p.lead { margin: 14px 0 0; color: var(--sub); }
 
     .cards {
-      margin-top: 14px;
+      margin-top: 16px;
       display: grid;
       gap: 10px;
     }
 
     .card {
-      border: 1px solid #ece8df;
+      border: 1px solid #e5e9e2;
       border-radius: 12px;
-      padding: 14px;
-      background: #fffcf8;
+      padding: 14px 16px;
+      background: #fbfbf9;
     }
 
     .card h3 {
       margin: 0;
-      font-size: 1.02rem;
-      color: #2e2e2e;
+      font-size: .98rem;
+      color: #202a35;
     }
 
-    .card p { margin-top: 6px; color: #5f5f5f; }
+    .card p { margin: 6px 0 0; color: var(--sub); font-size: .92rem; }
 
-    .sample-buttons {
-      margin-top: 18px;
-      display: grid;
-      gap: 14px;
+    .list-plain {
+      margin: 14px 0 0;
+      padding-left: 20px;
+      color: var(--sub);
     }
+    .list-plain li { margin-bottom: 6px; }
 
-    .sample-card {
-      border: 1px solid #eee5d8;
+    .partner-box {
+      margin-top: 16px;
+      border: 1px solid #dde7e6;
+      background: var(--bg-soft);
       border-radius: 14px;
-      background: #fffcf8;
-      padding: 12px;
-      text-align: center;
-      box-shadow: 0 3px 10px rgba(0,0,0,.04);
+      padding: 16px 18px;
     }
 
-    .sample-card img {
-      width: 96px;
-      height: 96px;
-      object-fit: contain;
+    .partner-box p:first-child { margin-top: 0; }
+
+    .partner-note {
+      margin-top: 14px;
+      font-weight: 700;
+      color: var(--accent-dark);
+    }
+
+    .work-card {
+      margin-top: 16px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .work-card img {
+      width: 100%;
       display: block;
-      margin: 0 auto 10px;
-      background: #fff;
-      padding: 4px;
-      border: 1px solid #ded8ce;
-      border-radius: 8px;
+      border-bottom: 1px solid var(--line);
     }
 
-    .sample-card h3 {
+    .work-card-body { padding: 18px; }
+
+    .work-card h3 {
       margin: 0;
-      font-size: 1.02rem;
-      color: #2e2e2e;
+      font-size: 1.08rem;
+      color: #1c2430;
     }
 
-    .sample-card p {
-      min-height: 4.8em;
-      margin: 6px 0 12px;
-      color: #5f5f5f;
-      font-size: .88rem;
-      line-height: 1.6;
-      text-align: left;
+    .work-card .tag {
+      display: inline-block;
+      margin-top: 6px;
+      font-size: .76rem;
+      color: var(--accent-dark);
+      background: #e8f1f0;
+      border-radius: 999px;
+      padding: 3px 10px;
     }
 
-    .sample-card .button {
-      margin: 0;
-      color: #fff;
-      border: none;
-      font-size: .9rem;
-      min-height: 46px;
-      padding: 10px 12px;
+    .work-card p { color: var(--sub); margin: 10px 0 0; }
+
+    .work-card .button { margin-top: 14px; width: auto; padding: 10px 22px; min-height: 44px; }
+
+    .works-note {
+      margin-top: 14px;
+      font-size: .86rem;
+      color: var(--sub);
     }
 
-    .button.matsu-a { background: #c0392b; }
-    .button.matsu-b { background: #9f2f24; }
-    .button.matsu-c { background: #7f271f; }
-    .button.sol-a { background: #5f7f6b; }
-    .button.sol-b { background: #4d7457; }
-    .button.sol-c { background: #2f5140; }
+    .contact-lead { margin-top: 14px; color: var(--sub); }
 
-    .price-list,
-    .contact-list {
-      margin: 12px 0 0;
-      padding-left: 18px;
-      color: #5a5a5a;
+    #email-link {
+      display: inline-block;
+      margin-top: 14px;
+      font-weight: 700;
+      word-break: break-all;
     }
 
-    .subservice { background: #f8f7f4; border-color: #e2dfd7; }
-
-    .subservice .alert {
-      margin-top: 12px;
-      padding: 12px;
-      border: 1px solid #e7ddcf;
-      background: #fff;
+    .contact-hint {
+      margin-top: 18px;
+      font-size: .86rem;
+      color: var(--sub);
+      background: var(--bg-soft);
       border-radius: 10px;
-      color: #5f5a52;
-      font-size: .95rem;
+      padding: 12px 14px;
     }
 
     footer {
       text-align: center;
-      padding: 24px;
+      padding: 26px 20px;
       font-size: 13px;
-      color: #666;
+      color: #7c8590;
     }
 
     @media (min-width: 760px) {
-      .hero { padding: 70px 24px 60px; }
-      .hero-cta { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 760px; }
-      main { padding: 36px 24px 56px; }
-      section { padding: 30px 26px; }
+      .site-nav { display: block; }
+      .hero { padding: 70px 24px 64px; }
+      .hero-cta { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 480px; }
+      main { padding: 40px 24px 24px; }
+      section { padding: 32px 30px; }
       .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .sample-buttons { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-
-    @media (min-width: 1080px) {
-      .sample-buttons { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-      .cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     }
   </style>
 </head>
 <body>
-  <div class="topbar">
-    <div class="topbar-inner">
-      <div class="brand">KREVIVE</div>
-      <div class="project">和歌山Webプロジェクト</div>
-    </div>
-  </div>
+  <a class="skip-link" href="#main">本文へスキップ</a>
 
-  <header class="hero">
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand" href="#top">KREVIVE</a>
+      <nav class="site-nav" aria-label="サイト内ナビゲーション">
+        <a href="#services">できること</a>
+        <a href="#partners">制作会社さまへ</a>
+        <a href="#works">実績</a>
+        <a href="#about">について</a>
+        <a href="#contact">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <header class="hero" id="top">
     <div class="hero-inner">
-      <p class="hero-sub"><strong>KREVIVE</strong>和歌山Webプロジェクト</p>
-      <p class="tagline">地域のお店のWeb制作と、暮らしの困りごと対応</p>
-      <h1>和歌山市の個人店・小規模店舗向け<br>スマホで見やすいLP制作</h1>
-      <p>GoogleマップやInstagramから来たお客様に、営業時間・メニュー・場所・お店の魅力がすぐ伝わる1ページ型のWebページを制作します。<br>地域密着で、店舗の情報整理から公開までサポートします。</p>
+      <p class="hero-eyebrow">和歌山拠点 / Web制作・更新・修正</p>
+      <h1>Web制作・更新・修正を、<br>必要なときに必要な分だけ。</h1>
+      <p>和歌山を拠点に、Webサイト制作・LP制作・既存サイトの軽微な修正やスポットコーディングに対応しています。</p>
+      <p class="hero-note">制作会社さまの繁忙時・スポット対応もご相談ください。</p>
       <div class="hero-cta">
-        <a class="button primary" href="#works">制作サンプルを見る</a>
-        <a class="button secondary" href="#contact">相談する</a>
+        <a class="button primary" href="#works">制作実績を見る</a>
+        <a class="button secondary" href="#contact">お問い合わせ</a>
       </div>
     </div>
   </header>
 
-  <main>
-    <section>
-      <h2>課題提起</h2>
-      <p>「お店の情報が散らばっていて伝わりにくい」「スマホで見づらい」「来店前に必要な情報へすぐたどり着けない」といった課題を、1ページに整理したLPで解消します。</p>
-    </section>
+  <main id="main">
 
-    <section>
-      <h2>LP制作でできること</h2>
+    <section id="services">
+      <h2><span class="en">SERVICES</span>できること</h2>
+      <p class="lead">小規模なWebサイト制作から、既存サイトの修正・更新・スポットコーディングまで対応しています。</p>
       <div class="cards">
         <article class="card">
-          <h3>情報を1ページに整理</h3>
-          <p>営業時間・メニュー・場所・予約導線をまとめ、迷わない導線を設計します。</p>
+          <h3>Webサイト制作・LP制作</h3>
+          <p>店舗・個人事業主向けのWebサイト、LPの制作。</p>
         </article>
         <article class="card">
-          <h3>スマホで見やすい設計</h3>
-          <p>スマホで読みやすく、押しやすいボタン配置で来店行動につなげます。</p>
+          <h3>HTML/CSS修正</h3>
+          <p>既存サイトのレイアウト・デザイン調整。</p>
         </article>
         <article class="card">
-          <h3>公開まで一括サポート</h3>
-          <p>構成整理、文面調整、ページ公開まで地域密着で対応します。</p>
+          <h3>レスポンシブ・スマホ表示調整</h3>
+          <p>スマホでの見え方・崩れの修正。</p>
         </article>
         <article class="card">
-          <h3>LINE予約・問い合わせ導線</h3>
-          <p>店舗LINEがある場合は、LPからLINE予約・LINE問い合わせへつなげる導線を設置します。電話が苦手なお客様にも使いやすい導線を作れます。</p>
+          <h3>テキスト・画像差し替え</h3>
+          <p>文言・写真・バナー等の差し替え作業。</p>
+        </article>
+        <article class="card">
+          <h3>CTA・リンク修正</h3>
+          <p>ボタンやリンク先の調整・修正。</p>
+        </article>
+        <article class="card">
+          <h3>ページ追加・既存ページ修正</h3>
+          <p>既存サイトへのページ追加や部分修正。</p>
+        </article>
+        <article class="card">
+          <h3>軽微なJavaScript修正</h3>
+          <p>簡単な動きや表示制御の調整。</p>
+        </article>
+        <article class="card">
+          <h3>Git/GitHubを使った更新</h3>
+          <p>バージョン管理を使ったサイト更新作業。</p>
         </article>
       </div>
-      <p>電話、Instagram、Googleマップに加えて、店舗LINEがある場合はLINE予約・LINE問い合わせへの導線も設置できます。店舗ごとに実際に使っている連絡手段を確認し、初めてのお客様が迷わず問い合わせできる形に整えます。</p>
+    </section>
+
+    <section id="partners">
+      <h2><span class="en">FOR PARTNERS</span>制作会社・代理店さまへ</h2>
+      <p class="lead">繁忙時の一時的なリソース不足や、細かなWeb修正・更新業務など、スポットで切り出しやすい作業から対応いたします。</p>
+      <div class="partner-box">
+        <p>対応例</p>
+        <ul class="list-plain">
+          <li>既存ページの修正</li>
+          <li>HTML/CSS調整</li>
+          <li>テキスト・画像差し替え</li>
+          <li>レスポンシブ調整</li>
+          <li>CTA・リンク修正</li>
+          <li>ページ追加補助</li>
+          <li>LPの軽微修正</li>
+        </ul>
+        <p class="partner-note">まずは小規模な作業からご相談ください。</p>
+      </div>
     </section>
 
     <section id="works">
-      <h2>制作サンプル</h2>
-      <p>松金サンプルは、初期案のA、ブラッシュアップ版のB、店舗情報を整理したHP版を掲載しています。PCで見せながら、お客様のスマホでもQRから確認できます。</p>
-      <div class="sample-buttons">
-        <div class="sample-card">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&margin=12&data=https%3A%2F%2Fkrevive1.github.io%2FWakayamaWebProject%2Fmatsukin%2F" alt="松金A QRコード" loading="lazy">
-          <h3>松金A</h3>
-          <p>初期コンセプトをもとに制作したランディングページ。</p>
-          <a class="button matsu-a" href="./matsukin/">松金Aを見る</a>
-        </div>
-        <div class="sample-card">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&margin=12&data=https%3A%2F%2Fkrevive1.github.io%2FWakayamaWebProject%2Fmatsukin-b%2F" alt="松金B QRコード" loading="lazy">
-          <h3>松金B</h3>
-          <p>店主へのヒアリングを重ね、お店の想いや価値をより伝えられるようブラッシュアップしたランディングページ。</p>
-          <a class="button matsu-b" href="./matsukin-b/">松金Bを見る</a>
-        </div>
-        <div class="sample-card">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&margin=12&data=https%3A%2F%2Fkrevive1.github.io%2FWakayamaWebProject%2Fmatsukin-hp%2F" alt="松金HP QRコード" loading="lazy">
-          <h3>松金HP</h3>
-          <p>店舗情報や全メニューを掲載したホームページ版。</p>
-          <a class="button matsu-c" href="./matsukin-hp/">松金HPを見る</a>
-        </div>
-        <div class="sample-card">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&margin=12&data=https%3A%2F%2Fkrevive1.github.io%2FWakayamaWebProject%2Fsol-dog-design%2F" alt="ソルドッグ パターンA QRコード" loading="lazy">
-          <a class="button sol-a" href="./sol-dog-design/">パターンA：上質ミニマルサロン系</a>
-        </div>
-        <div class="sample-card">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&margin=12&data=https%3A%2F%2Fkrevive1.github.io%2FWakayamaWebProject%2Fsol-dog-design-cute%2F" alt="ソルドッグ パターンB QRコード" loading="lazy">
-          <a class="button sol-b" href="./sol-dog-design-cute/">パターンB：ボタニカル上質サロン系</a>
-        </div>
-        <div class="sample-card">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&margin=12&data=https%3A%2F%2Fkrevive1.github.io%2FWakayamaWebProject%2Fsol-dog-design-botanical%2F" alt="ソルドッグ パターンC QRコード" loading="lazy">
-          <a class="button sol-c" href="./sol-dog-design-botanical/">パターンC：多層ページ・高級サロン系</a>
+      <h2><span class="en">WORKS</span>制作実績</h2>
+      <p class="lead">和歌山の知人が営む飲食店「ホルモン馬鹿 松金」様のWebサイト制作を担当しました。</p>
+      <div class="work-card">
+        <img src="./matsukin-b/assets/storenight.jpg" alt="ホルモン馬鹿 松金 店内の様子" loading="lazy">
+        <div class="work-card-body">
+          <h3>ホルモン馬鹿 松金</h3>
+          <span class="tag">知人が営む飲食店 / 和歌山市アロチ</span>
+          <p>スマホでの見やすさを重視し、お店の雰囲気が伝わるデザインで制作。電話・Googleマップへの導線、メニューや店舗情報を整理し、来店につながる情報をまとめました。</p>
+          <a class="button primary" href="./matsukin-b/" style="background: var(--accent-dark);">松金のサイトを見る</a>
         </div>
       </div>
+      <p class="works-note">現在、公開できる制作実績は松金様のサイトです。今後、店舗・制作会社さまとのお仕事を通じて実績を増やしていく予定です。</p>
     </section>
 
-    <section>
-      <h2>料金目安</h2>
-      <ul class="price-list">
-        <li>お試し制作：30,000円</li>
-        <li>通常制作：50,000円</li>
-        <li>制作＋月額管理：初期30,000円＋月額5,000円</li>
-        <li>しっかり制作：80,000円〜100,000円</li>
+    <section id="style" class="plain">
+      <h2><span class="en">STYLE</span>対応スタイル</h2>
+      <ul class="list-plain">
+        <li>和歌山を拠点に活動</li>
+        <li>リモート対応可能</li>
+        <li>小規模な修正から相談可能</li>
+        <li>スポット対応</li>
+        <li>納期ベースでの対応</li>
+        <li>Git/GitHubでの更新に対応</li>
       </ul>
     </section>
 
-    <section class="subservice">
-      <h2>こんなこともやっています：家庭の排水詰まり・詰まりかけの通し作業</h2>
-      <p>Web制作がメインですが、地域の暮らしの困りごと対応として、家庭の排水詰まり・詰まりかけの通し作業も対応可能な範囲で行っています。</p>
-      <p class="alert">設備の破損、配管工事、大規模な詰まり、トイレ詰まり、危険作業は対応できない場合があります。<br>現地確認後、対応できる範囲で作業します。<br>無理な作業は行わず、必要に応じて専門業者への相談をおすすめします。</p>
+    <section id="about">
+      <h2><span class="en">ABOUT</span>KREVIVEについて</h2>
+      <p class="lead">KREVIVEは、和歌山を拠点にWebサイト制作・更新・修正を行っています。店舗向けのWeb制作や、自身で運営するWebサイトの継続的な改善を通じて、「見た目を作るだけでなく、情報が伝わり、使いやすいWeb」を意識しています。</p>
+      <p class="lead">制作会社さまからのスポット対応・外部パートナーのご相談にも対応しています。</p>
     </section>
 
     <section id="contact">
-      <h2>お問い合わせ</h2>
-      <p>ご相談はInstagramまたはメールからお問い合わせください。</p>
-      <ul class="contact-list">
-        <li>連絡先：準備中</li>
-        <li>Instagram：<a href="https://www.instagram.com/lp_wakayama/" target="_blank" rel="noopener noreferrer">https://www.instagram.com/lp_wakayama/</a></li>
-        <li>メール：<a href="mailto:qgsky21777@gmail.com">qgsky21777@gmail.com</a></li>
-      </ul>
+      <h2><span class="en">CONTACT</span>お問い合わせ</h2>
+      <p class="contact-lead">制作会社さまの外部パートナーに関するご相談、店舗サイトの制作・修正に関するご相談、どちらもお気軽にご連絡ください。</p>
+      <a id="email-link" href="#" rel="nofollow">メールでのお問い合わせはこちら</a>
+      <p class="contact-hint">お名前・ご相談内容（制作会社さまのスポット対応 / 店舗サイトの制作・修正 など）を添えてご連絡いただけるとスムーズです。</p>
     </section>
+
   </main>
 
   <footer>
-    © KREVIVE / 和歌山Webプロジェクト
+    © KREVIVE
   </footer>
+
+  <script>
+    (function () {
+      var user = ['q','g','s','k','y','2','1','7','7'].join('');
+      var domain = ['gmail','com'].join('.');
+      var addr = user + '@' + domain;
+      var link = document.getElementById('email-link');
+      link.href = 'mailto:' + addr + '?subject=' + encodeURIComponent('【KREVIVE】お問い合わせ');
+      link.textContent = addr;
+    })();
+  </script>
 </body>
 </html>
